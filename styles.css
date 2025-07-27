@@ -761,166 +761,63 @@ section {
 
 
 
-/*
-.brown-theme {
-    background: linear-gradient(120deg, #f5eee6 0%, #d2b48c 100%);
-}
-.accent-title, .section-title, .accent-quote span, .brown-quote span {
-    color: #8b5c2a;
-}
-.angebote-bg-svg {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    z-index: 0;
-    pointer-events: none;
-}
+
 .accent-list-exklusiv {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-rows: auto auto; */
+    grid-template-rows: repeat(3, auto);
     gap: 2.5rem;
     position: relative;
     z-index: 1;
 }
-.glass-card {
-    background: rgba(245, 238, 230, 0.85);
-    backdrop-filter: blur(10px) saturate(120%);
-    border-radius: 32px;
-    box-shadow: 0 8px 48px 0 #8b5c2a22, 0 0 0 2px #d2b48c;
-    border: 1px solid rgba(139,92,42,0.18);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    overflow: hidden;
-    transition: box-shadow 0.5s, border 0.5s, transform 0.5s;
-}
-.glass-card:hover {
-    box-shadow: 0 16px 64px 0 #8b5c2a33, 0 0 0 6px #d2b48c;
-    border: 1px solid #8b5c2a44;
-    transform: scale(1.03) rotate(-1deg);
-}
-.card-svg {
-    position: absolute;
-    left: 18px; top: 18px;
-    z-index: 2;
-}
-.card-img {
-    width: 100%;
-    max-width: 180px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 18px;
-    margin-top: auto;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 12px #8b5c2a22;
-    align-self: center;
-    transition: transform 0.4s;
-}
-.card-img:hover {
-    transform: scale(1.08) rotate(-2deg);
-    box-shadow: 0 8px 32px #8b5c2a33;
-}
-.tall-card { min-height: 340px; }
-.medium-card { min-height: 260px; }
-.short-card { min-height: 180px; }
 
-.brown-quote {
-    color: #8b5c2a;
-    opacity: 0.18;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    text-align: right;
+/* Верхний ряд: 1-я слева, 2-я справа, 3-я по центру */
+.accent-list-exklusiv > :nth-child(1) {
+    grid-row: 1;
+    grid-column: 1;
 }
+.accent-list-exklusiv > :nth-child(2) {
+    grid-row: 1;
+    grid-column: 3;
+}
+.accent-list-exklusiv > :nth-child(3) {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/* Нижний ряд: 4-я слева, 5-я справа */
+.accent-list-exklusiv > :nth-child(4) {
+    grid-row: 3;
+    grid-column: 1;
+}
+.accent-list-exklusiv > :nth-child(5) {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+
+.exclusive-card:nth-child(3){
+    margin-top: -95%;
+}
+.exclusive-card:nth-child(4){
+    margin-top: -50%;
+}
+.exclusive-card:nth-child(5){
+    margin-top: -50%;
+}
+
 @media (max-width: 900px) {
     .accent-list-exklusiv {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
         gap: 1.2rem;
     }
-    .angebote-bg-svg {
-        height: 90px;
-        top: -20px;
+    .accent-list-exklusiv > * {
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
-    .glass-card {
-        border-radius: 18px;
+    .exclusive-card{
+        margin-top: 0;
     }
-    .card-img {
-        max-width: 98vw;
-        height: 80px;
-        border-radius: 12px;
-    }
-    .tall-card, .medium-card, .short-card { min-height: 120px; }
-}*/
-/*
-.hero-section,
-.accent-block,
-.values-section,
-.contact-section,
-.events-section {
-    min-height: 100vh;
-    width: 100vw;
-    max-width: none;
-    margin: 0;
-    border-radius: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
-.hero-section {
-    background: linear-gradient(120deg, #8b5c2a 0%, #d2b48c 100%);
-    color: #fff;
-}
-.hero-content {
-    background: rgba(139,92,42,0.75);
-    color: #fff;
-    box-shadow: 0 8px 48px 0 #8b5c2a44;
-}
-.hero-title.accent {
-    background: linear-gradient(90deg, #fff 40%, #d2b48c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-}
-.hero-lead,
-.hero-block {
-    color: #fff;
-}
-.cta-btn {
-    background: linear-gradient(90deg, #d2b48c 0%, #8b5c2a 100%);
-    color: #fff;
-}
-.cta-btn:hover {
-    background: linear-gradient(90deg, #8b5c2a 0%, #d2b48c 100%);
-}
-*/
-
-
-/* circle*//*
-body {
-    background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 600 220' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='g1' cx='50%' cy='50%' r='60%' ><stop offset='0%' stop-color='%23d2b48c' stop-opacity='0.18'/><stop offset='100%' stop-color='%23f5eee6' stop-opacity='0'/></radialGradient></defs><ellipse cx='520' cy='60' rx='48' ry='32' fill='url(%23g1)'/><circle cx='120' cy='160' r='38' fill='%238b5c2a' opacity='0.13'/><path d='M0,120 Q150,200 300,120 T600,120' stroke='%23a67c52' stroke-width='18' fill='none' opacity='0.09'/><path d='M80,40 Q140,100 200,40' stroke='%23d2b48c' stroke-width='8' fill='none' opacity='0.13'/><path d='M400,180 Q500,220 600,180' stroke='%238b5c2a' stroke-width='12' fill='none' opacity='0.08'/><path d='M300,40 A60,60 0 0,1 420,40' fill='none' stroke='%23a67c52' stroke-width='7' opacity='0.10'/></svg>")
-        no-repeat center center fixed,
-        linear-gradient(120deg, #f5eee6 0%, #d2b48c 100%);
-    background-size: cover, cover;
-}*/
-/* one heartz*//*
-body {
-    background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 600 220' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='g1' cx='50%' cy='50%' r='60%' ><stop offset='0%' stop-color='%23d2b48c' stop-opacity='0.18'/><stop offset='100%' stop-color='%23f5eee6' stop-opacity='0'/></radialGradient></defs><ellipse cx='520' cy='60' rx='48' ry='32' fill='url(%23g1)'/><path d='M0,120 Q150,200 300,120 T600,120' stroke='%23a67c52' stroke-width='18' fill='none' opacity='0.09'/><path d='M80,40 Q140,100 200,40' stroke='%23d2b48c' stroke-width='8' fill='none' opacity='0.13'/><path d='M400,180 Q500,220 600,180' stroke='%238b5c2a' stroke-width='12' fill='none' opacity='0.08'/><path d='M300,40 A60,60 0 0,1 420,40' fill='none' stroke='%23a67c52' stroke-width='7' opacity='0.10'/><path d='M120,160 C120,150 135,140 150,150 C165,140 180,150 180,160 C180,175 150,195 150,195 C150,195 120,175 120,160 Z' fill='%238b5c2a' opacity='0.13'/></svg>")
-        no-repeat center center fixed,
-        linear-gradient(120deg, #f5eee6 0%, #d2b48c 100%);
-    background-size: cover, cover;
-}
-*/
-/* two heartz*//*
-body {
-    background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 600 220' xmlns='http://www.w3.org/2000/svg'><defs><radialGradient id='g1' cx='50%' cy='50%' r='60%' ><stop offset='0%' stop-color='%23d2b48c' stop-opacity='0.18'/><stop offset='100%' stop-color='%23f5eee6' stop-opacity='0'/></radialGradient></defs><ellipse cx='520' cy='60' rx='48' ry='32' fill='url(%23g1)'/><path d='M0,120 Q150,200 300,120 T600,120' stroke='%23a67c52' stroke-width='18' fill='none' opacity='0.09'/><path d='M80,40 Q140,100 200,40' stroke='%23d2b48c' stroke-width='8' fill='none' opacity='0.13'/><path d='M400,180 Q500,220 600,180' stroke='%238b5c2a' stroke-width='12' fill='none' opacity='0.08'/><path d='M300,40 A60,60 0 0,1 420,40' fill='none' stroke='%23a67c52' stroke-width='7' opacity='0.10'/><path d='M120,160 C120,150 135,140 150,150 C165,140 180,150 180,160 C180,175 150,195 150,195 C150,195 120,175 120,160 Z' fill='%238b5c2a' opacity='0.13'/><path d='M500,180 C500,170 510,160 520,170 C530,160 540,170 540,180 C540,190 520,205 520,205 C520,205 500,190 500,180 Z' fill='%23d2b48c' opacity='0.18'/><path d='M60,60 C60,54 68,48 76,54 C84,48 92,54 92,60 C92,68 76,78 76,78 C76,78 60,68 60,60 Z' fill='%23ffb6c1' opacity='0.15'/><path d='M320,100 C320,92 330,84 340,92 C350,84 360,92 360,100 C360,110 340,124 340,124 C340,124 320,110 320,100 Z' fill='%238b5c2a' opacity='0.10'/></svg>")
-        no-repeat center center fixed,
-        linear-gradient(120deg, #f5eee6 0%, #d2b48c 100%);
-    background-size: cover, cover;
-}*/
-/* sun wave*/
-
