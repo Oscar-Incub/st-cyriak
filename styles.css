@@ -1,6 +1,7 @@
 :root
 {
-    --primary-color: #8b5c2a;
+    /* --primary-color: #8b5c2a; */
+    --primary-color: #d51116;
     --secondary-color: #d2b48c;
     --accent-color: #ffe0e6;
     --text-color: #222;
@@ -102,7 +103,7 @@ section {
 }
 .nav-link:hover, .nav-link.active {
     background: linear-gradient(90deg, #a07a29 0%, #fff 100%);
-    color: #8b5c2a;
+    color: #d51116;
 }
 
 /* --- Hero --- */
@@ -158,12 +159,12 @@ section {
 .hero-title {
     font-size: 2.6rem;
     font-weight: bold;
-    color: #8b5c2a;
+    color: #d51116;
     margin-bottom: 1rem;
     letter-spacing: 1px;
 }
 .hero-title.accent {
-    background: linear-gradient(135deg, #8b5c2a 40%, #ceb88f 100%);
+    background: linear-gradient(135deg, #d51116 40%, #ceb88f 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -175,7 +176,7 @@ section {
 }
 .hero-block {
     background: rgba(255,255,255,0.85);
-    border-left: 4px solid #8b5c2a;
+    border-left: 4px solid #d51116;
     padding: 1rem 1.5rem;
     border-radius: 12px;
     font-size: 1.08rem;
@@ -186,7 +187,7 @@ section {
 .cta-btn {
     display: inline-block;
     margin-top: 1.5rem;
-    background: linear-gradient(90deg, #8b5c2a 0%, #d9b58f 100%);
+    background: linear-gradient(90deg, #d51116 0%, #d9b58f 100%);
     color: #fff;
     padding: 0.9rem 2.2rem;
     border-radius: 32px;
@@ -198,7 +199,7 @@ section {
     letter-spacing: 1px;
 }
 .cta-btn:hover {
-        background: linear-gradient(90deg, #8b5c2a 0%, #d9b58f 100%);
+        background: linear-gradient(90deg, #d51116 0%, #d9b58f 100%);
     transform: scale(1.07) translateY(-2px);
     box-shadow: 0 8px 32px rgba(214,0,28,0.18);
 }
@@ -246,6 +247,7 @@ section {
     margin: 2rem auto;
     max-width: 1200px;
     position: relative;
+    overflow: visible;
 }
 .accent-title {
     font-size: 1.7rem;
@@ -290,16 +292,7 @@ section {
     transform: translateY(-6px) scale(1.04) rotate(-1deg);
     background: linear-gradient(90deg, #ffe0e6 0%, #fff 100%);
 }
-.card-img {
-    width: 100%;
-    max-width: 120px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 0.7rem;
-    box-shadow: 0 2px 8px rgba(214,0,28,0.10);
-    transition: transform 0.4s;
-}
+
 .accent-quote {
     position: absolute;
     right: 2.5rem;
@@ -308,8 +301,25 @@ section {
     opacity: 0.15;
     font-weight: bold;
     pointer-events: none;
-    color: #8b5c2a;
+    color: var(--primary-color);
 }
+.angebote-bg-svg {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    z-index: 0;
+    pointer-events: none;
+}
+ .accent-list-exklusiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+} 
+
 
 /* --- Unsere Werte --- */
 /*.values-section {
@@ -320,10 +330,10 @@ section {
 }*/
 .section-title {
     font-size: 1.4rem;
-    color: #8b5c2a;
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-weight: bold;
-    width: 100%;
+    width: 100%ш;
 }
 .values-grid {
     width: 100%;
@@ -333,7 +343,7 @@ section {
 }
 .value-card {
     background: rgba(255,255,255,0.85);
-    border-left: 4px solid #8b5c2a;
+    border-left: 4px solid var(--primary-color);
     padding: 1.2rem 1.5rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     border-radius: 14px;
@@ -347,7 +357,7 @@ section {
     background: linear-gradient(90deg, #d6af7c 0%, #fff 100%);
 }
 .value-card strong {
-    color: #8b5c2a;
+    color: var(--primary-color);
 }
 
 
@@ -364,7 +374,7 @@ section {
 }
 .event-card {
     background: rgba(255,255,255,0.85);
-    border-left: 4px solid #8b5c2a;
+    border-left: 4px solid var(--primary-color);
     padding: 1.2rem 1.5rem;
     border-radius: 14px;
     font-size: 1.08rem;
@@ -379,7 +389,7 @@ section {
     background: linear-gradient(90deg, #ffe0e6 0%, #fff 100%);
 }
 .event-empty {
-    color: #8b5c2a;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -417,7 +427,7 @@ section {
 }
 
 .hero-title.accent {
-    background: linear-gradient(90deg, #8b5c2a 40%, #ffb6c1 100%);
+    background: linear-gradient(90deg, #d51116 40%, #ffb6c1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -523,7 +533,7 @@ section {
     position: absolute;
     left: 0; top: 0; bottom: 0;
     width: 18px;
-    background: linear-gradient(180deg, #8b5c2a 0%, #ffe2b6 100%);
+    background: linear-gradient(180deg, #d51116 0%, #ffe2b6 100%);
     border-radius: 24px 0 0 24px;
     box-shadow: 0 0 24px #8b5c2a44;
 }
@@ -531,13 +541,13 @@ section {
     position: absolute;
     left: 24px; top: 24px;
     font-size: 2.2rem;
-    color: #8b5c2a;
+    color: var(--primary-color);
     opacity: 0.7;
     filter: drop-shadow(0 2px 8px #8b5c2a22);
 }
 .exclusive-card strong {
     font-size: 1.2rem;
-    color: #8b5c2a;
+    color: var(--primary-color);
     letter-spacing: 1px;
 }
 .exclusive-card:hover {
@@ -566,26 +576,8 @@ section {
     }
 }
 
-.accent-block {
-    position: relative;
-    overflow: visible;
-}
-.angebote-bg-svg {
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    height: 220px;
-    z-index: 0;
-    pointer-events: none;
-}
- .accent-list-exklusiv {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-    position: relative;
-    z-index: 1;
-} 
+
+
  /*
 .accent-list-exklusiv {
     display: grid;
@@ -607,17 +599,7 @@ section {
     grid-row: 2;
 }*/
 
-@media (max-width: 900px) {
-    .accent-list-exklusiv {
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        gap: 1.2rem;
-    }
-    .accent-list-exklusiv > * {
-        grid-column: auto !important;
-        grid-row: auto !important;
-    }
-}
+
 
 .glass-card {
     background: rgba(255,255,255,0.35);
@@ -647,7 +629,7 @@ section {
 }
 .glass-card strong {
     font-size: 1.2rem;
-    color: #8b5c2a;
+    color: var(--primary-color);
     letter-spacing: 1px;
 }
 .card-img {
@@ -658,7 +640,7 @@ section {
     border-radius: 18px;
     margin-top: auto;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 12px #8b5c2a22;
+    box-shadow: 0 2px 8px rgba(214,0,28,0.10);
     align-self: center;
     transition: transform 0.4s;
 }
@@ -669,7 +651,12 @@ section {
 @media (max-width: 900px) {
     .accent-list-exklusiv {
         grid-template-columns: 1fr;
+        grid-template-rows: none;
         gap: 1.2rem;
+    }
+    .accent-list-exklusiv > * {
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
     .angebote-bg-svg {
         height: 120px;
@@ -689,7 +676,8 @@ section {
 
 /* --- Футер --- */
 .footer-down {
-    background: linear-gradient(90deg, #8b5c2a 0%, #222 100%);
+    background: linear-gradient(90deg, #d51116 0%, #b30404 100%);
+    /* background: linear-gradient(90deg, #d51116 0%, #222 100%); */
     color: #fff;
     padding: 1.5rem 0 1.5rem 0;
     text-align: center;
@@ -702,7 +690,7 @@ section {
 }
 
 .footer {
-    background: linear-gradient(90deg, #8b5c2a 0%, #222 100%);
+    /* background: linear-gradient(90deg, #d51116 0%, #222 100%); */
     color: #fff;
     padding: 2.5rem 0 0 0;
     text-align: center;
@@ -711,7 +699,7 @@ section {
     letter-spacing: 1px;
     border-radius: 24px 24px 0 0;
     position: relative;
-    background-image: url('./img/hous/footer-bg.jpg');
+    /* background-image: url('./img/hous/footer-bg.jpg'); */
     background-size: cover;
     background-position: bottom;
     background-blend-mode: multiply;
@@ -724,9 +712,10 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgb(139 92 42 / 65%);
+    /* background: rgba(139, 42, 42, 0.65); */
     z-index: 1;
     border-radius: 24px 24px 0 0;
+    filter: blur(10px) saturate(0.5);
 }
 .footer-title{
     color: #fff;
@@ -752,7 +741,7 @@ section {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    color: #8b5c2a;
+    color: var(--primary-color);
     font-size: 1.15rem;
     background: rgba(255,255,255,0.85);
     border-radius: 12px;
