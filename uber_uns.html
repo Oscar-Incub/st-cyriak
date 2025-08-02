@@ -9,6 +9,8 @@
     <meta name="author" content="St. Cyriak Wohnen & Pflege">
     <title>St. Cyriak Wohnen & Pflege</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!--div class="menu-backdrop"></div-->
@@ -16,11 +18,11 @@
         <div class="container">
             <div class="container-inner">
                 <div class="logo">
-                    <img src="img/logo-red.png" alt="St. Cyriak Logo">
+                    <a class="logo-link" href="index.html" ><img src="img/logo-red.png" alt="St. Cyriak Logo"></a>
                 </div>
                 <div class="nav-menu">
-                    <a href="#angebote" class="nav-link">Unsere Angebote</a>
-                    <a href="/uber_uns.html" class="nav-link">Über uns</a>
+                    <a href="/angebote" class="nav-link">Unsere Angebote</a>
+                    <a href="uber_uns.html" class="nav-link">Über uns</a>
                     <a href="#" class="nav-link">Aktivitäten</a>
                     <a href="#" class="nav-link">Beruf & Ausbildung</a>
                     <a href="#" class="nav-link">Aktuelles</a>
@@ -268,56 +270,7 @@
     </footer>
 
 
-<script>
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in, .fade-in-up, .card-animate').forEach(el => observer.observe(el));
-</script>
-
-    <script>
-        const slides = document.querySelectorAll('.hero-image-slider .slider-img');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 4000);
-    </script>
-
-<script>    
-    function setHeaderSmall() {
-        const header = document.querySelector('header');
-        if (window.innerWidth <= 920) {
-            header.classList.add('header-small');
-            header.style.transition = 'none';
-        } else {
-            header.classList.remove('header-small');
-            header.style.transition = ''; 
-        }
-    }
-    window.addEventListener('resize', setHeaderSmall);
-    document.addEventListener('DOMContentLoaded', setHeaderSmall);
-
-    
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.innerWidth > 920) {
-            if(window.scrollY > 40) {
-                header.classList.add('header-small');
-            } else {
-                header.classList.remove('header-small');
-            }
-        }
-    });
-</script>
-
-    <!-- Modal Kontakt -->
+<!-- Modal Kontakt -->
         <div id="contact-modal" class="modal-overlay">
             <div class="modal-window">
                 <button class="modal-close" aria-label="Schließen">&times;</button>
@@ -329,43 +282,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.querySelector('.cta-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('contact-modal').style.display = 'flex';
-            });
-            document.querySelector('.modal-close').addEventListener('click', function() {
-                document.getElementById('contact-modal').style.display = 'none';
-            });
-            document.getElementById('contact-modal').addEventListener('click', function(e) {
-                if (e.target === this) this.style.display = 'none';
-            });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.getElementById('contact-modal').style.display = 'none';
-                }
-            });
-        </script>
-        <script>
-            const burger = document.querySelector('.burger');
-            const navMenu = document.querySelector('.nav-menu');
-            const backdrop = document.querySelector('.menu-backdrop');
-
-            function closeMenu() {
-                navMenu.classList.remove('open');
-                burger.classList.remove('open');
-                backdrop.classList.remove('active');
-            }
-
-            burger.addEventListener('click', function() {
-                navMenu.classList.toggle('open');
-                burger.classList.toggle('open');
-                backdrop.classList.toggle('active');
-            });
-            backdrop.addEventListener('click', closeMenu);
-            window.addEventListener('resize', function() {
-                if(window.innerWidth > 920) closeMenu();
-            });
-        </script>
 </body>
 </html>

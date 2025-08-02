@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="St. Cyriak Wohnen und Pflege - Ihre Ansprechpartner im St. Cyriak Wohnen und Pflege. Wir setzen auf Teamwork und persönliche Verantwortung.">
+    <meta name="keywords" content="St. Cyriak, Wohnen, Pflege, Ansprechpartner, Teamwork, Verantwortung, Furtwangen">
+    <meta name="author" content="St. Cyriak Wohnen & Pflege">
     <title>St. Cyriak Wohnen & Pflege</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
+<!--div class="menu-backdrop"></div-->
     <header>     
         <div class="container">
             <div class="container-inner">
                 <div class="logo">
-                    <img src="img/logo-red.png" alt="St. Cyriak Logo">
+                    <a class="logo-link" href="index.html" ><img src="img/logo-red.png" alt="St. Cyriak Logo"></a>
                 </div>
                 <div class="nav-menu">
-                    <a href="#angebote" class="nav-link">Unsere Angebote</a>
-                    <a href="/uber_uns.html" class="nav-link">Über uns</a>
+                    <a href="/angebote" class="nav-link">Unsere Angebote</a>
+                    <a href="uber_uns.html" class="nav-link">Über uns</a>
                     <a href="#" class="nav-link">Aktivitäten</a>
                     <a href="#" class="nav-link">Beruf & Ausbildung</a>
                     <a href="#" class="nav-link">Aktuelles</a>
                 </div>
+                <button class="burger" aria-label="Menü öffnen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
                     
-        <div class="header-bar">
+        <!--div class="header-bar">
             <div class="container">
                 <div class="container-inner">
                     <div class="header-bar-left">
@@ -48,14 +60,15 @@
                     </div>
                     <div class="nav-menu">
                         <a href="#angebote" class="nav-link">Unsere Angebote</a>
-                        <a href="#" class="nav-link">Über uns</a>
+                        <a href="/uber_uns.html" class="nav-link">Über uns</a>
                         <a href="#" class="nav-link">Aktivitäten</a>
                         <a href="#" class="nav-link">Beruf & Ausbildung</a>
                         <a href="#" class="nav-link">Aktuelles</a>
                     </div>
+                    
                 </div>
             </div>
-        </nav>
+        </nav>-->
     </header>
 
     <main>
@@ -237,38 +250,8 @@
         </div>
         <div class="footer-down">© St. Cyriak Wohnen & Pflege</div>
     </footer>
-    <script>
-    // Анимация появления при скролле
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in, .fade-in-up, .card-animate').forEach(el => observer.observe(el));
-    </script>
-    <script>
-        const slides = document.querySelectorAll('.hero-image-slider .slider-img');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 4000);
-    </script>
-    <script>
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if(window.scrollY > 40) {
-                header.classList.add('header-small');
-            } else {
-                header.classList.remove('header-small');
-            }
-        });
-    </script>
 
-    <!-- Modal Kontakt -->
+<!-- Modal Kontakt -->
         <div id="contact-modal" class="modal-overlay">
             <div class="modal-window">
                 <button class="modal-close" aria-label="Schließen">&times;</button>
@@ -280,22 +263,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            document.querySelector('.cta-btn').addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('contact-modal').style.display = 'flex';
-            });
-            document.querySelector('.modal-close').addEventListener('click', function() {
-                document.getElementById('contact-modal').style.display = 'none';
-            });
-            document.getElementById('contact-modal').addEventListener('click', function(e) {
-                if (e.target === this) this.style.display = 'none';
-            });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    document.getElementById('contact-modal').style.display = 'none';
-                }
-            });
-        </script>
 </body>
 </html>
