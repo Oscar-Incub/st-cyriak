@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>        
+    <header>     
+        <div class="container">
+            <div class="container-inner">
+                <div class="logo">
+                    <img src="img/logo-red.png" alt="St. Cyriak Logo">
+                </div>
+                <div class="nav-menu">
+                    <a href="#angebote" class="nav-link">Unsere Angebote</a>
+                    <a href="/uber_uns.html" class="nav-link">Über uns</a>
+                    <a href="#" class="nav-link">Aktivitäten</a>
+                    <a href="#" class="nav-link">Beruf & Ausbildung</a>
+                    <a href="#" class="nav-link">Aktuelles</a>
+                </div>
+            </div>
+        </div>
+                    
         <div class="header-bar">
             <div class="container">
                 <div class="container-inner">
@@ -49,7 +64,7 @@
                 <div class="container-inner">
                     <div class="hero-image">
                         <!--<img src="img/hous/3.jpg" alt="Pflege Alltag" class="fade-in">-->
-                        <div class="hero-image-slider" style="position:relative; width:100%; height:320px;">
+                        <div class="hero-image-slider">
                             <img src="img/hous/3.jpg" alt="Pflege Alltag" class="slider-img active">
                             <img src="img/hous/2.jpg" alt="Pflege Team" class="slider-img">
                             <img src="img/hous/1.webp" alt="Pflege Zimmer" class="slider-img">
@@ -57,7 +72,7 @@
                     </div>
                     
                     <div class="hero-content fade-in-up">
-                        <h1 class="hero-title accent">St. Cyriak Wohnen und Pflege</h1>
+                        <h1 class="hero-title title accent">St. Cyriak Wohnen und Pflege</h1>
                         <p class="hero-lead">
                             Wir – das gesamte Team der Pflegeeinrichtung St. Cyriak Wohnen und Pflege – begrüßen Sie herzlich auf unserer Website.
                         </p>
@@ -205,12 +220,19 @@
                             <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
                         </div>
                     </div>
-                    <form class="subscribe-form fade-in-up">
+                    <div class="footer-quote-img">
+                        <img src="img/footer-gut.jpg" alt="Man pflegt nur mit dem Herzen gut">
+                    </div>
+                    <!--form class="subscribe-form fade-in-up">
                         <label class="section-title footer-title" for="subscribe-email">Newsletter abonnieren:</label>
                         <input class="contact-item" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ihre E-Mail" required>
                         <button type="submit" class="cta-btn">Abonnieren</button>
-                    </form>
-                
+                    </form>-->                
+            </div>
+            <div class="footer-nav fade-in-up">
+                <a href="#" class="nav-link">Kontakt</a>
+                <a href="#" class="nav-link">Datenschutz</a>
+                <a href="#" class="nav-link">Impressum</a>
             </div>
         </div>
         <div class="footer-down">© St. Cyriak Wohnen & Pflege</div>
@@ -235,5 +257,45 @@
             slides[current].classList.add('active');
         }, 4000);
     </script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 40) {
+                header.classList.add('header-small');
+            } else {
+                header.classList.remove('header-small');
+            }
+        });
+    </script>
+
+    <!-- Modal Kontakt -->
+        <div id="contact-modal" class="modal-overlay">
+            <div class="modal-window">
+                <button class="modal-close" aria-label="Schließen">&times;</button>
+                <h2>Kontaktieren Sie uns</h2>
+                <div class="contact-list">
+                <div class="contact-item"><span class="contact-icon">📞</span>+49 7723 9304-0</div>
+                <div class="contact-item"><span class="contact-icon">✉️</span>info@st-cyriak.de</div>
+                <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelector('.cta-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('contact-modal').style.display = 'flex';
+            });
+            document.querySelector('.modal-close').addEventListener('click', function() {
+                document.getElementById('contact-modal').style.display = 'none';
+            });
+            document.getElementById('contact-modal').addEventListener('click', function(e) {
+                if (e.target === this) this.style.display = 'none';
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    document.getElementById('contact-modal').style.display = 'none';
+                }
+            });
+        </script>
 </body>
 </html>
