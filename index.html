@@ -13,6 +13,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <button id="to-top-btn" aria-label="Nach oben" title="Nach oben">&#11161;</button>
 <!--div class="menu-backdrop"></div-->
     <header>     
         <div class="container">
@@ -78,9 +79,9 @@
                     <div class="hero-image">
                         <!--<img src="img/hous/3.jpg" alt="Pflege Alltag" class="fade-in">-->
                         <div class="hero-image-slider">
-                            <img src="img/hous/3.jpg" alt="Pflege Alltag" class="slider-img active">
-                            <img src="img/hous/2.jpg" alt="Pflege Team" class="slider-img">
-                            <img src="img/hous/1.webp" alt="Pflege Zimmer" class="slider-img">
+                            <img src="img/hous/3.jpg" alt="Pflege Alltag" class="slider-img active" loading="lazy">
+                            <img src="img/hous/2.jpg" alt="Pflege Team" class="slider-img" loading="lazy">
+                            <img src="img/hous/1.webp" alt="Pflege Zimmer" class="slider-img" loading="lazy">
                         </div>
                     </div>
                     
@@ -103,7 +104,7 @@
             </div>
         </section>
 
-        <section id="angebote" class="accent-block fade-in-up">
+        <section id="angebote" class="fade-in-up">
             <!--<div class="angebote-bg-svg">
                 <svg viewBox="0 0 600 220" fill="none">
                     <path d="M0,80 Q150,180 300,80 T600,80 V220 H0 Z" fill="#a67c52" opacity="0.18"/>
@@ -112,65 +113,80 @@
                 </svg>
             </div>-->
             <div class="container">                
-                <div class="container-inner"> 
+                <div class="container-inner accent-block"> 
                     <h2 class="section-title">Unser Angebot mit Herz</h2>
                     <p class="accent-subtitle">
                         Sie sind pflegebedürftig oder suchen nach Antworten für Ihre Angehörigen? Wir beraten Sie gerne!
                     </p>
-                    <div class="values-grid">
-                        <div class="accent-list accent-list-exklusiv">
-                            <div class="exclusive-card card-animate glass-card tall-card">
-                                <div class="card-svg">
-                                    <svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">👵</text></svg>
-                                </div>
-                                <div>
-                                    <strong>Vollstationäre Pflege</strong><br>
-                                    Wir unterstützen Sie in ihrer Pflegehilfsbedürftigkeit ganzheitlich mit Empathie, Menschlichkeit und Gemeinschaft.
-                                </div>
-                                <img src="img/hous/1.webp" alt="Pflege" class="card-img">
+                    
+                    <div class="accent-list accent-list-exklusiv">
+                        <div class="exclusive-card card-animate glass-card tall-card">
+                            <div class="card-svg">
+                                <!--svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">👵</text></svg>
+                            -->
+                                <img src="img/mit-Herz.png" alt="Herz" class="card-icon-herz" style="width: 42px; height: 42px;" loading="lazy">
                             </div>
-                            <div class="exclusive-card card-animate glass-card medium-card">
-                                <div class="card-svg">
-                                    <svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#8b5c2a"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">⏳</text></svg>
-                                </div>
-                                <div>
-                                    <strong>Kurzzeit- und Verhinderungspflege</strong><br>
+                            
+                            <h4 class="card-title">Vollstationäre Pflege</h4>
+                            <p class="card-text">
+                                Wir unterstützen Sie in ihrer Pflegehilfsbedürftigkeit ganzheitlich mit Empathie, Menschlichkeit und Gemeinschaft.
+                            </p>
+                            <img src="img/hous/1.webp" alt="Pflege" class="card-img" loading="lazy">
+                        </div>
+                        <div class="exclusive-card card-animate glass-card medium-card">
+                            <div class="card-svg">
+                                <img src="img/mit-Herz.png" alt="Herz" class="card-icon-herz" style="width: 42px; height: 42px;" loading="lazy">
+                                <!--svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#8b5c2a"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">⏳</text></svg-->
+                            </div>
+                            <div>
+                                <h4 class="card-title">Kurzzeit- und Verhinderungspflege</h4>
+                                <p class="card-text">
                                     Es steht eine Reha kurz bevor oder Ihre Angehörige bzw. die pflegerische Bezugsperson möchte gerne in Urlaub gehen? Bei uns haben Sie die Möglichkeit das Angebot der Kurzzeitpflege in Anspruch zu nehmen.
-                                </div>
-                                <img src="img/hous/3.jpg" alt="Kurzzeitpflege" class="card-img">
+                                </p>
                             </div>
-                            <div class="exclusive-card card-animate glass-card short-card">
-                                <div class="card-svg">
-                                    <svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#a67c52"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🧠</text></svg>
-                                </div>
-                                <div>
-                                    <strong>Beschützendes Wohnen</strong><br>
+                            <img src="img/hous/3.jpg" alt="Kurzzeitpflege" class="card-img" loading="lazy">
+                        </div>
+                        <div class="exclusive-card card-animate glass-card short-card">
+                            <div class="card-svg">
+                                <img src="img/mit-Herz.png" alt="Herz" class="card-icon-herz" style="width: 42px; height: 42px;" loading="lazy">
+                                <!--svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#a67c52"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🧠</text></svg-->
+                            </div>
+                            <div>
+                                <h4 class="card-title">Beschützendes Wohnen</h4>
+                                <p class="card-text">
                                     Wir haben einen beschützen Wohnbereich für dementiell erkrankte Menschen. Hier legen wir Wert darauf, dass alle Sinne im Alltag so lange als möglich erhalten bleiben. Unser Mitarbeiterteam der Pflege und sozialen Betreuung setzt auf Ressourcenerhalt. Egal ob beim Entspannen im Snoezeln oder beim Spazieren gehen im Klara-Siedle-Sinnegarten, um frische Schwarzwaldluft einzuatmen: uns liegt jeder Bewohner am Herzen.
-                                </div>
-                                <img src="img/hous/2.jpg" alt="Demenz" class="card-img">
-                            </div>                            
-                            <div class="exclusive-card card-animate glass-card tall-card">
-                                <div class="card-svg">
-                                    <svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🍽️</text></svg>
-                                </div>
-                                <div>
-                                    <strong>Betreutes Wohnen</strong><br>
+                                </p>
+                            </div>
+                            <img src="img/hous/2.jpg" alt="Demenz" class="card-img" loading="lazy">
+                        </div>                            
+                        <div class="exclusive-card card-animate glass-card tall-card">
+                            <div class="card-svg">
+                                <img src="img/mit-Herz.png" alt="Herz" class="card-icon-herz" style="width: 42px; height: 42px;" loading="lazy">
+                                <!--svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🍽️</text></svg-->
+                            </div>
+                            <div>
+                                <h4 class="card-title">Betreutes Wohnen</h4>
+                                <p class="card-text">
                                     Unser Angebot für Menschen mit einer noch relativ großen Selbstständigkeit und Mobilität. Hier wohnen Sie in einem Appartement und können am sozial-gesellschaftlichen Leben der Einrichtung teilnehmen.
-                                </div>
-                                <img src="img/hous/2.jpg" alt="Mittagstisch" class="card-img">
+                                </p>
                             </div>
-                            <div class="exclusive-card card-animate glass-card tall-card">
-                                <div class="card-svg">
-                                    <svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🍽️</text></svg>
-                                </div>
-                                <div>
-                                    <strong>Offener Mittagstisch</strong><br>
+                            <img src="img/hous/2.jpg" alt="Mittagstisch" class="card-img" loading="lazy">
+                        </div>
+                        <div class="exclusive-card card-animate glass-card tall-card">
+                            <div class="card-svg">
+                                <img src="img/mit-Herz.png" alt="Herz" class="card-icon-herz" style="width: 42px; height: 42px;" loading="lazy">
+                                <!--svg width="48" height="48"><circle cx="24" cy="24" r="22" fill="#d2b48c"/><text x="50%" y="58%" text-anchor="middle" font-size="2rem">🍽️</text></svg-->
+                            </div>
+                            <div>
+                                <h4 class="card-title">Offener Mittagstisch</h4>
+                                <p class="card-text">
                                     Unsere hauseigene Küche kocht täglich frisch und verwendet Produkte und Zutaten aus der Region. Sie zählen sich schon zu der etwas älteren Generation und haben Interesse, bei uns in Gesellschaft Mittag zu essen, dann melden Sie sich bis 9:00 Uhr dazu an.
-                                </div>
-                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Mittagstisch" class="card-img">
+                                </p>
                             </div>
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Mittagstisch" class="card-img" loading="lazy">
                         </div>
                     </div>
+                    
                     <div class="accent-quote brown-quote">
                         <span>Man pflegt nur mit dem <strong>Herzen</strong> gut</span>
                     </div>
@@ -178,9 +194,9 @@
             </div>
         </section>
 
-        <section id="werte" class="values-section fade-in-up">
-            <div class="container glass-block">                
-                <div class="container-inner">                    
+        <section id="werte" class="fade-in-up">
+            <div class="container">                
+                <div class="container-inner accent-block">                    
                     <h2 class="section-title">Unsere Werte</h2>
                     <p class="accent-subtitle">
                         St. Cyriak Wohnen und Pflege versteht sich in seinem Kernbereich, der Pflege und Betreuung alter, pflegebedürftiger Menschen, sowohl als Dienstleister und Versorger. Dabei ist es in der pflegerischen Versorgung und Betreuung unser Ziel:
@@ -213,13 +229,9 @@
                     </div>
                 </div>                        
             </div>
-        </section>
+        </section>        
 
-        
-
-    </main>
-
-    
+    </main>    
 
     <footer class="footer">
         <div class="container">                
@@ -233,8 +245,8 @@
                             <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
                         </div>
                     </div>
-                    <div class="footer-quote-img">
-                        <img src="img/footer-gut.jpg" alt="Man pflegt nur mit dem Herzen gut">
+                    <div class="footer-quote-img fade-in-up">
+                        <img src="img/footer-gut.jpg" alt="Man pflegt nur mit dem Herzen gut" loading="lazy">
                     </div>
                     <!--form class="subscribe-form fade-in-up">
                         <label class="section-title footer-title" for="subscribe-email">Newsletter abonnieren:</label>
@@ -253,7 +265,7 @@
 
 <!-- Modal Kontakt -->
         <div id="contact-modal" class="modal-overlay">
-            <div class="modal-window">
+            <div class="modal-window fade-in-up">
                 <button class="modal-close" aria-label="Schließen">&times;</button>
                 <h2>Kontaktieren Sie uns</h2>
                 <div class="contact-list">

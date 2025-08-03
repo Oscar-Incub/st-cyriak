@@ -1,4 +1,16 @@
-
+// Кнопка "наверх"
+    const toTopBtn = document.getElementById('to-top-btn');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            toTopBtn.style.display = 'block';
+        } else {
+            toTopBtn.style.display = 'none';
+        }
+    });
+    toTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
    /*-----*/     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
