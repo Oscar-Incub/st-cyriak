@@ -1,4 +1,6 @@
-// Кнопка "наверх"
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// --Top Button
     const toTopBtn = document.getElementById('to-top-btn');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
@@ -31,32 +33,49 @@
             slides[current].classList.add('active');
         }, 4000);
 
-/*-----*/    
-    
-    function setHeaderSmall() {
-        const header = document.querySelector('header');
-        if (window.innerWidth <= 920) {
+/*---header scroll--*/    
+function setHeaderSmall() {
+    const header = document.querySelector('header');
+    // На мобильных не трогаем класс
+    if (window.innerWidth > 920) {
+        if(window.scrollY > 40) {
             header.classList.add('header-small');
-            header.style.transition = 'none';
         } else {
             header.classList.remove('header-small');
-            header.style.transition = ''; 
         }
+        header.style.transition = '';
+    } else {
+        header.classList.remove('header-small');
+        header.style.transition = 'none';
     }
-    window.addEventListener('resize', setHeaderSmall);
-    document.addEventListener('DOMContentLoaded', setHeaderSmall);
+}
+window.addEventListener('resize', setHeaderSmall);
+window.addEventListener('scroll', setHeaderSmall);
+document.addEventListener('DOMContentLoaded', setHeaderSmall);    
+    // function setHeaderSmall() {
+    //     const header = document.querySelector('header');
+    //     if (window.innerWidth <= 920) {
+    //         header.classList.add('header-small');
+    //         header.style.transition = 'none';
+    //     } else {
+    //         header.classList.remove('header-small');
+    //         header.style.transition = ''; 
+    //     }
+    // }
+    // window.addEventListener('resize', setHeaderSmall);
+    // document.addEventListener('DOMContentLoaded', setHeaderSmall);
 
     
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('header');
-        if (window.innerWidth > 920) {
-            if(window.scrollY > 40) {
-                header.classList.add('header-small');
-            } else {
-                header.classList.remove('header-small');
-            }
-        }
-    });
+    // window.addEventListener('scroll', function() {
+    //     const header = document.querySelector('header');
+    //     if (window.innerWidth > 920) {
+    //         if(window.scrollY > 40) {
+    //             header.classList.add('header-small');
+    //         } else {
+    //             header.classList.remove('header-small');
+    //         }
+    //     }
+    // });
 
 
     
