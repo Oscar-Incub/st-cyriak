@@ -36,7 +36,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 /*---header scroll--*/    
 function setHeaderSmall() {
     const header = document.querySelector('header');
-    // На мобильных не трогаем класс
     if (window.innerWidth > 920) {
         if(window.scrollY > 40) {
             header.classList.add('header-small');
