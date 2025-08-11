@@ -232,6 +232,11 @@
                         </p>
                         <p>Unterstützung: 24/7</p>
                     </div>
+                    <div class="footer__block">
+                        <div class="img-footer">
+                            <a class="logo-link" href="/" ><img src="img/furtwangen/header-stellen-cyriak.png" alt="St. Cyriak"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer__bottom">
@@ -261,7 +266,7 @@ function loadSheetToDiv(SHEET_ID, RANGE, divId) {
 
   function colObjToCssColor(c) {
     if (!c) return null;
-    if (c.rgbColor) c = c.rgbColor; // поддержка backgroundColorStyle
+    if (c.rgbColor) c = c.rgbColor; 
     const r = Math.round((c.red || 0) * 255);
     const g = Math.round((c.green || 0) * 255);
     const b = Math.round((c.blue || 0) * 255);
@@ -450,7 +455,7 @@ function loadSheetToDiv(SHEET_ID, RANGE, divId) {
     });
 }
 
-// Примеры вызова
+
 loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "rmenu-1!A1:E8", "table1");
 loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "rmenu-2!A1:E8", "table2");
 loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "abcd!A1:F10", "table3");
