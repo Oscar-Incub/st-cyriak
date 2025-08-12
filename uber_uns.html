@@ -3,39 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     <meta name="description" content="St. Cyriak Wohnen und Pflege - Ihre Ansprechpartner im St. Cyriak Wohnen und Pflege. Wir setzen auf Teamwork und persönliche Verantwortung.">
     <meta name="keywords" content="St. Cyriak, Wohnen, Pflege, Ansprechpartner, Teamwork, Verantwortung, Furtwangen">
     <meta name="author" content="St. Cyriak Wohnen & Pflege">
     <title>St. Cyriak Wohnen & Pflege</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">    
     <script src="script.js" defer></script>
 </head>
 <body>
-    <button id="to-top-btn" aria-label="Nach oben" title="Nach oben">&#11161;</button>
-    <!--div class="menu-backdrop"></div-->
-    <header>     
-        <div class="container">
-            <div class="container-inner">
-                <div class="logo">
-                    <a class="logo-link" href="index.html" ><img src="img/logo-red.png" alt="St. Cyriak Logo"></a>
+        <button id="to-top-btn" aria-label="Nach oben" title="Nach oben">&#11161;</button>
+    <header class="header"> 
+            <div class="header-wrapper">
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="container-inner">
+                            <div class="header-bar-left">
+                                <a class="top-bar-email" href="mailto:info@st-cyriak.de"> info@st-cyriak.de</a>
+                                <a class="top-bar-tel" href="tel:49772393040">+49 7723 9304-0</a>
+                            </div> 
+                            <!-- <div class="social-icons">
+                                <a href="#" class="social-icon" title="Hauptseite">
+                                    <i class="fas fa-home"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-icon" title="Xing">
+                                    <i class="fab fa-xing"></i>
+                                </a>
+                            </div>  -->
+                        </div>
+                    </div>
                 </div>
-                <div class="nav-menu">
-                    <a href="mittagstisch.html" class="nav-link">Unsere Angebote</a>
-                    <a href="uber_uns.html" class="nav-link">Über uns</a>
-                    <a href="mittagstisch.html" class="nav-link">Aktivitäten</a>
-                    <a href="freie_stellen.html" class="nav-link">Beruf & Ausbildung</a>
-                    <a href="#" class="nav-link">Aktuelles</a>
+                
+                <div class="main-header">
+                    <div class="container">
+                        <div class="container-inner">
+                            <nav class="navigation nav-menu">
+                                <div class="nav-item">
+                                    <a href="#" class="nav-link nav-button">
+                                        Unsere Angebote
+                                        <span class="nav-arrow">▼</span>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-item">Vollstationäre Pflege</a>
+                                        <a href="#" class="dropdown-item">Kurzzeit- und Verhinderungspflege</a>
+                                        <a href="#" class="dropdown-item">Betreutes Wohnen</a>
+                                        <a href="#" class="dropdown-item">Beschützter Wohnbereich</a>
+                                        <a href="mittagstisch.html" class="dropdown-item">Offener Mittagstisch</a>
+                                        <a href="#" class="dropdown-item">Begleitung und Seelsorge</a>
+                                        <a href="#" class="dropdown-item">Dienstleister</a>
+                                        <a href="#" class="dropdown-item">Kirnerstube</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="nav-item">
+                                    <a href="uber_uns.html" class="nav-link nav-button">
+                                        Über uns
+                                        <span class="nav-arrow">▼</span>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdown-item">Ansprechpartner</a>
+                                        <a href="#" class="dropdown-item">Trägerverein</a>
+                                        <a href="#" class="dropdown-item">MAV Mitarbeitervertretung</a>
+                                        <a href="#" class="dropdown-item">Heimbeirat</a>
+                                        <a href="#" class="dropdown-item">Ehrenamt</a>
+                                    </div>
+                                </div>
+
+                                <div class="nav-item">
+                                    <a href="#" class="nav-link nav-button">
+                                        Aktivitäten
+                                    </a>
+                                </div>
+
+                                <div class="nav-item">
+                                    <a href="beruf_ausbildung.html" class="nav-link nav-button">
+                                        Beruf & Ausbildung
+                                        <span class="nav-arrow">▼</span>
+                                    </a>
+                                    <div class="dropdown">
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">Freie Stellen</a>
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">Ausbildung</a>
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">FSJ, BFD & Praktikum</a>
+                                    </div>
+                                </div>
+
+                                <div class="nav-item">
+                                    <a href="#" class="nav-link nav-button">
+                                        Aktuelles
+                                    </a>
+                                </div>
+                            </nav>
+                            <button class="burger" aria-label="Menü öffnen">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            
+                            <div class="logo-section">
+                                <div class="logo">
+                                    <a class="logo-link" href="index.html" ><img src="img/logo-red.png" alt="St. Cyriak Logo"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="burger" aria-label="Menü öffnen">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+            </div>            
+        
+    </header> 
 
     <main>            
         <section class="main-section visible">
@@ -206,47 +294,35 @@
     
 
     <footer class="footer">
-        <div class="container">                
-            <div class="container-inner footer-content">
-                
-                    <div id="kontakt" class="contact-section fade-in-up">
-                        <h2 class="section-title footer-title">Kontaktieren Sie uns</h2>
-                        <div class="contact-list">
-                            <div class="contact-item"><span class="contact-icon">📞</span>+49 7723 9304-0</div>
-                            <div class="contact-item"><span class="contact-icon">✉️</span>info@st-cyriak.de</div>
-                            <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
+        <div class="container">
+            <div class="container-inner">
+                <div class="footer__info">
+                    <div class="footer__block">
+                        <h4>Kontaktieren Sie uns</h4>
+                        <p>Email: <a href="mailto:info@example.com">info@st-cyriak.de</a></p>
+                        <p>Telefon: <a href="tel:+497723930409">+49 7723 9304-0</a></p>
+                        <p>Standort: Am Kirchberg 6, 78120 Furtwangen, Deutschland</p>
+                    </div>
+                    <div class="footer__block">
+                        <h4>Arbeitszeitplan</h4>
+                        <p>
+                            <strong>Sie erreichen uns wie folgt:</strong><br>
+                            Montag bis Donnerstag: 09.00 Uhr bis 12.00 Uhr
+                        </p>
+                        <p>Unterstützung: 24/7</p>
+                    </div>
+                    <div class="footer__block">
+                        <div class="img-footer">
+                            <a class="logo-link" href="/" ><img src="img/furtwangen/header-stellen-cyriak.png" alt="St. Cyriak"></a>
                         </div>
                     </div>
-                    <div class="footer-quote-img fade-in-up">
-                        <img src="img/footer-gut.jpg" alt="Man pflegt nur mit dem Herzen gut">
-                    </div>
-                    <!--form class="subscribe-form fade-in-up">
-                        <label class="section-title footer-title" for="subscribe-email">Newsletter abonnieren:</label>
-                        <input class="contact-item" type="email" id="subscribe-email" name="subscribe-email" placeholder="Ihre E-Mail" required>
-                        <button type="submit" class="cta-btn">Abonnieren</button>
-                    </form>-->                
-            </div>
-            <div class="footer-nav fade-in-up">
-                <a href="#" class="nav-link">Kontakt</a>
-                <a href="#" class="nav-link">Datenschutz</a>
-                <a href="#" class="nav-link">Impressum</a>
-            </div>
-        </div>
-        <div class="footer-down">© St. Cyriak Wohnen & Pflege</div>
-    </footer>
-
-
-<!-- Modal Kontakt -->
-        <div id="contact-modal" class="modal-overlay">
-            <div class="modal-window">
-                <button class="modal-close" aria-label="Schließen">&times;</button>
-                <h2>Kontaktieren Sie uns</h2>
-                <div class="contact-list">
-                <div class="contact-item"><span class="contact-icon">📞</span>+49 7723 9304-0</div>
-                <div class="contact-item"><span class="contact-icon">✉️</span>info@st-cyriak.de</div>
-                <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
                 </div>
             </div>
+            <div class="footer__bottom">
+                <p> <span id="year"></span> &copy; St. Cyriak Wohnen & Pfleg</p>
+            </div>            
         </div>
+    </footer>
+
 </body>
 </html>

@@ -36,6 +36,7 @@
     opacity: 0.9;
 }
 body {
+    font-size: 1.25rem;
     font-family: 'Space Grotesk', Arial, sans-serif;
     /* font-family: 'Bitter', Georgia, "Times New Roman", serif; */
     color: #222;
@@ -629,12 +630,12 @@ header.header-small .navigation  {
     text-wrap: balance 
 }
    
-.hero-title.accent {
+/* .hero-title.accent {
     background: linear-gradient(90deg, #d51116 40%, #ffb6c1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
+} */
 .hero-image {
     flex: 1 1 300px;
     min-width: 300px;
@@ -698,6 +699,7 @@ header.header-small .navigation  {
     transition: box-shadow 0.4s;
 }
 .cta-btn {
+    cursor: pointer;
     display: inline-block;
     margin-top: 1.5rem;
     background: #d51116;
@@ -943,14 +945,14 @@ header.header-small .navigation  {
     color: #444;
     /* margin-bottom: 0.3rem; */
     line-height: 1.3;
-    font-family: system-ui;
-    font-size: 1.05rem;
+    /* font-family: system-ui; */
+    font-size: 1rem;
 }
 .card-img {
     width: 100%;
     max-width: 270px;
     height: 140px;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 18px;
     margin-top: auto;
     /*padding-top: 10px;
@@ -1127,6 +1129,12 @@ header.header-small .navigation  {
     }
 }
 @media (max-width: 420px) {
+    body {
+        min-width: 320px;
+    }
+    .logo img {
+        height: 45px;
+    }
     .hero-image, .hero-content {
         min-width: auto;
     }
@@ -1146,7 +1154,18 @@ header.header-small .navigation  {
 
 }
 
-
+@media (max-width: 320px) {
+    .glass-card {
+        width: 200px;
+    }
+    .burger {
+        top: -25px;
+        left: 3px;
+    }
+    .burger span {
+        margin: 3px 0;
+    }
+}
 
 
 
@@ -1428,14 +1447,19 @@ header.header-small .navigation  {
 }
 
 .footer__block {
-  flex: 1 1 250px;
+  /* flex: 1 1 250px; */
   min-width: 250px;
   position: relative;
 }
 
-.img-footer img{
-    height: 250px;
-    filter: saturate(0.5) drop-shadow(2px 4px 6px black);
+.footer__block .img-footer img {
+    position: absolute;
+    /* top:0;
+    left: 0; */
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    filter: saturate(0.5) drop-shadow(3px 6px 16px #d51116);
 }
 
 .footer__block h4 {
@@ -1461,7 +1485,40 @@ header.header-small .navigation  {
   font-size: 1rem;
   color: #ffffff;
 }
+
+
+
+
+@media (max-width: 1240px) {
+    .footer__block .img-footer img {
+        position: relative;
+        top:0;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 920px) {
+    .footer__block {
+        width: 300px;
+    }
+    .footer__block .img-footer img {
+        position: relative;
+        top:0;
+        left: 0;
+        width: 100%;
+    }
+
+
+}
+
 @media (max-width: 640px) {
+    .footer .container-inner {
+        justify-content: center;
+        gap: 0;
+    }
   .footer__info {
     flex-direction: column;
     align-items: flex-start;
@@ -1476,12 +1533,12 @@ header.header-small .navigation  {
     font-size: 14px;
   }
   .footer__info {
-    gap: 0;
+    gap: 50px;
     margin-bottom: 0;
     }
-    .footer__block {
+    /* .footer__block {
         flex: 1 1 180px;
-    }
+    } */
     .footer .values-grid {
         padding: 1rem 0;
     }
@@ -1704,7 +1761,8 @@ header.header-small .navigation  {
 }
 
 
-/*--- Page Beruf & Ausbildung --- */
+/*-------- style Page Beruf & Ausbildung --- */    
+
     .beruf_ausbildung .accordion {
         width: 90%;
         max-width: 900px;
@@ -1712,7 +1770,7 @@ header.header-small .navigation  {
         }
     .beruf_ausbildung .container-inner {
         align-items: start;
-        /* flex-wrap: nowrap; */
+        justify-content: space-between;
     }
     .beruf_ausbildung .container-inner {
         padding-top: 70px;
@@ -1722,10 +1780,10 @@ header.header-small .navigation  {
     }
     .img-block  {
         position: sticky;
-        /* top: 0;
-        height: 100vh; */
         top: 50%;
-        height: auto;
+        width: 100%;
+        max-width: 500px;
+        /* margin: auto; */
         display: flex;
         align-self: flex-start;
         align-items: center;
@@ -1733,7 +1791,6 @@ header.header-small .navigation  {
         z-index: 10;
         background: transparent;
         pointer-events: none;
-        /* animation: heartbeat 8s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite; */
         animation: heartbeat 1.4s linear infinite;
         transform-origin: center;
         z-index: 2;
@@ -1778,7 +1835,7 @@ header.header-small .navigation  {
       animation-delay: 8.9s;
     }
 
-    /* Пульсация основного сердца */
+
     @keyframes heartbeat {
       0%, 100% { transform: scale(1); }
       /* 14% { transform: scale(1.3); } */
@@ -1787,7 +1844,7 @@ header.header-small .navigation  {
       /* 70% { transform: scale(1); } */
     }
 
-    /* Эффект расходящейся волны */
+   
     @keyframes waveEffect {
       0% {
         transform: scale(1);
@@ -1887,80 +1944,183 @@ header.header-small .navigation  {
       text-decoration: underline;
     }
 
+    /* .beruf_ausbildung .accent-list-exklusiv {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        gap: 5rem;
+        position: relative;
+        z-index: 1;
+    } */
+    .beruf_ausbildung .card-text {
+        min-height: 110px;
+    }
+        
+
+    @media (min-width: 1201px) {
+        .beruf_ausbildung .exclusive-card:nth-child(2) {
+            margin-top: 0;
+            grid-row: 1;
+            max-height: 100%;
+        }
+    }
+
+    @media (max-width: 1240px) {
+        .beruf_ausbildung .img-block {
+            position: relative;
+            top: 0;
+            max-width: 340px;
+            margin: auto;
+        }
+        .beruf_ausbildung .img-content img {
+            width: 300px;
+            height: 300px;
+            top: 100px;
+        }
+    }
+
     @media (max-width: 920px) {
-        .img-block {
-            /* position: relative; */
-            /* position: absolute;
-            top: -200px;
-            right: -34px;
-            z-index: -1;
-            opacity: 0.23;
-            scale: 0.47; */
+        .beruf_ausbildung .container-inner {
+            padding: 50px;
         }
+        .beruf_ausbildung .img-block{}
     }
+
     @media (max-width: 640px) {
-        .img-block {
-            right: 50%;
-            left: 50%;
+        .beruf_ausbildung .container-inner {
+            padding: 20px;
         }
     }
-    @media (max-width: 420px) {        
-        .accordion-header {
+    @media (max-width: 560px) { 
+        .beruf_ausbildung .img-content img {
+            width: 250px;
+            height: 250px;
+            top: 45px;
+        }
+        .beruf_ausbildung .uns .title {
+            margin-top: 50px;
+            font-size: 2rem !important;
+            text-align: center;
+            line-height: 1.2;
+        }
+    }  
+
+    @media (max-width: 420px) {     
+        .beruf_ausbildung .img-content img {
+            width: 200px;
+            height: 200px;
+            top: 45px;
+        }    
+        .beruf_ausbildung .text-content {
+            width: 100%;
+            max-width: 317px;
+            padding: 0;
+        }
+        .beruf_ausbildung .accordion-header {
             font-size: 0.85rem;
         }
-        .accordion-content.open {
+        .beruf_ausbildung .accordion-content.open {
             font-size: 14px;
         }
     }
 
 
-
-
-
-/* Вертикальное отображение таблицы на мобильных */
-/* Мобильная адаптация: таблица вниз */
-/* Мобильная адаптация таблицы из Google Sheets */
+/* ------- style Page Mittagstisch-------------------- */
 #table3 .sheets-clone {
     max-width: 700px;
 }
 .sheets-clone {
-    max-width: 1160px;
+    max-width: 1150px;
+    width: 100%;
     margin: auto;
 }
 
-@media (max-width: 768px) {
-  /* .sheets-clone {
-    border: 0;
-    width: 100%;
-  }
-  .sheets-clone colgroup {
-    display: none;
-  }
-  .sheets-clone tr {
-    display: block;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    background: #fff;
-  }
-  .sheets-clone td {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0.4rem;
-    border: none !important;
-    border-bottom: 1px solid #eee !important;
-    font-size: 0.9em;
-  }
-  .sheets-clone td:last-child {
-    border-bottom: none !important;
-  }
-  .sheets-clone td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-right: 1rem;
-    white-space: nowrap;
-    color: #333;
-  } */
+#table3, #table2, #table1  {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+#table3, #table4 {
+    width: 320px;
+    order: 1;
+}
+#speiseplan3 .table-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#speiseplan3 .speiseplan-content {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 600px;
+    text-wrap: balance;
+}
+
+.rmenu-mobile {
+  display: none;
+}
+
+.menu-day {
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.menu-day h3 {
+  margin: 0;
+  padding: 8px;
+  background: var(--primary-color);
+  color: #f5f5f5;
+  font-size: 16px;
+}
+
+.menu-item {
+  padding: 8px;
+  border-top: 1px solid #eee;
+}
+
+.menu-label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .box-shadow{
+        box-shadow: none !important;
+    }
+    #table1 table, #table2 table {
+    display: none !important;
+    }
+    #table2, #table1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .rmenu-mobile {
+    display: block;
+    }
+
+    #speiseplan3 .speiseplan-content {
+        padding: 30px 0;
+        font-size: 16px;
+    }
+}
+
+  @media (max-width: 640px) {
+    #speiseplan3 .table-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+  }
+
+
+
+
 

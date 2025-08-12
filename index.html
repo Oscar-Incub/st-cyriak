@@ -62,7 +62,7 @@
                                         <a href="#" class="dropdown-item">Kurzzeit- und Verhinderungspflege</a>
                                         <a href="#" class="dropdown-item">Betreutes Wohnen</a>
                                         <a href="#" class="dropdown-item">Beschützter Wohnbereich</a>
-                                        <a href="#" class="dropdown-item">Offener Mittagstisch</a>
+                                        <a href="mittagstisch.html" class="dropdown-item">Offener Mittagstisch</a>
                                         <a href="#" class="dropdown-item">Begleitung und Seelsorge</a>
                                         <a href="#" class="dropdown-item">Dienstleister</a>
                                         <a href="#" class="dropdown-item">Kirnerstube</a>
@@ -70,7 +70,7 @@
                                 </div>
                                 
                                 <div class="nav-item">
-                                    <a href="#" class="nav-link nav-button">
+                                    <a href="uber_uns.html" class="nav-link nav-button">
                                         Über uns
                                         <span class="nav-arrow">▼</span>
                                     </a>
@@ -90,14 +90,14 @@
                                 </div>
 
                                 <div class="nav-item">
-                                    <a href="#" class="nav-link nav-button">
+                                    <a href="beruf_ausbildung.html" class="nav-link nav-button">
                                         Beruf & Ausbildung
                                         <span class="nav-arrow">▼</span>
                                     </a>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-item">Freie Stellen</a>
-                                        <a href="#" class="dropdown-item">Ausbildung</a>
-                                        <a href="#" class="dropdown-item">FSJ, BFD & Praktikum</a>
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">Freie Stellen</a>
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">Ausbildung</a>
+                                        <a href="/beruf-ausbildung/fsj-praktikum/" class="dropdown-item">FSJ, BFD & Praktikum</a>
                                     </div>
                                 </div>
 
@@ -347,6 +347,23 @@
                 </div>
             </div>
         </div>
-
+<script>
+    /*---button  Mehr erfahren---*/    
+    document.querySelector('.cta-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('contact-modal').style.display = 'flex';
+    });
+    document.querySelector('.modal-close').addEventListener('click', function() {
+        document.getElementById('contact-modal').style.display = 'none';
+    });
+    document.getElementById('contact-modal').addEventListener('click', function(e) {
+        if (e.target === this) this.style.display = 'none';
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.getElementById('contact-modal').style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

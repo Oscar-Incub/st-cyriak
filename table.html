@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wochenmenü</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  }
+  thead {
+    background-color: #a00;
+    color: white;
+  }
+  th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    font-weight: bold;
+  }
+  /* Мобильная адаптация */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    thead {
+      display: none;
+    }
+    tr {
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      min-height: 40px;
+    }
+    td:before {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: 45%;
+      white-space: normal;
+      font-weight: bold;
+      color: #a00;
+    }
+    td:nth-of-type(1):before { content: "Tag"; }
+    td:nth-of-type(2):before { content: "Mittag Menü 1"; }
+    td:nth-of-type(3):before { content: "Mittag Menü 2"; }
+    td:nth-of-type(4):before { content: "Abendessen 1"; }
+    td:nth-of-type(5):before { content: "Abendessen 2"; }
+  }
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Mittag Menü 1</th>
+      <th>Mittag Menü 2</th>
+      <th>Abendessen 1</th>
+      <th>Abendessen 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Montag</td>
+      <td>Tagessuppe-a-c-g-i, Angeb. Maultaschen-a-g mit Speck-1 Zwiebeln, Ei-c und Salat-g-i-j, Cremedessert-g</td>
+      <td>Tagessuppe-a-c-g-i, Angeb. Maultaschen-a-g Zwiebeln, Ei-i und Salat-g-i-j, Cremedessert-g</td>
+      <td>Restaurationsteller1-2-3-5garnier-t-i-c Brot-a und Butter-g</td>
+      <td>Reisbrei-a g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Dienstag</td>
+      <td>Tagessuppe-a-c-g-i, -1Currywurst-1mit Teigwaren-a-cund Salat-g-i-j, Pudding-g</td>
+      <td>Tagessuppe-a-c-g-i, Nudelauflauf-a-c-gm Tomatensose-g und Salat-g-i-j, Pudding-g</td>
+      <td>Wurstsalat-1-2-3-5-5garnier-t-i-c Brot-a und Butter-g</td>
+      <td>Hirsebrei-a g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Mittwoch</td>
+      <td>Tagessuppe-a-c-g-i, Hacksteak-a-kan Rahmsobe-gmit Kartoffelpüree-gund Salat-g-i-j, Fr. Obst</td>
+      <td>Tagessuppe-a-c-g-i, Vegetarisches Schnitzel-a-f-an Rahmsobe-gmit Kartoffelpüree-gund Salat-g-i-j, Fr. Obst</td>
+      <td>Bunte Abendplatte-1-2-3-5 garnier-t-i-c Brot-a und Butter-g</td>
+      <td>Grießbrei-a g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Donnerstag</td>
+      <td>Tagessuppe-a-c-g-i, Hähnchenschnitte-a an pikanter Soße-i-g Kroketten und Salat-g-i-j, Quarkdessert-g</td>
+      <td>Tagessuppe-a-c-g-i, Gemüsesteak-a mit Kroketten und Salat-g-i-j, Quarkdessert-g</td>
+      <td>Krakauer, Fleischwurst-1-2-3-5garnier-t-i-c Brot-a und Butter-g</td>
+      <td>Reisbrei-a g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Freitag</td>
+      <td>Tagessuppe-a-c-g-i, Gebackenes Fischfilet-a-dSc. Remoulade-c-j-4-5-7 und Kartoffelsalat-i-j, Joghurt-g</td>
+      <td>Tagessuppe-a-c-g-i, Quarkauflauf-a-gmit Kompott-3 , Joghurt-g</td>
+      <td>Gem. Käseteller-gmit Rettich Brot-a und Butter-g</td>
+      <td>Zwieback Brei-g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Samstag</td>
+      <td>Italienische Gemüsesuppe-imit Rauchfleisch-1, Kuchendessert-a-c-g</td>
+      <td>Italienische Gemüsesuppe-imit Rauchfleisch-1, Kuchendessert-a-c-g</td>
+      <td>Salamiaufschnitt-3-4-5mit Eiersalat-a-c-j-4-5 Brot-a und Butter-g</td>
+      <td>Grießbrei-a g / Kompott-3</td>
+    </tr>
+    <tr>
+      <td>Sonntag</td>
+      <td>Tagessuppe-a-c-g-i, Hirschragout-ian Preiselbeer Soße mit Wirsinggemüse-gund Butterspätzle-g-a, Sonntagsdessert-g</td>
+      <td>Tagessuppe-a-c-g-i, Hirschragout-ian Preiselbeer Soße mit Wirsinggemüse-gund Butterspätzle-g-a, Sonntagsdessert-g</td>
+      <td>Gem. Schinkenplatte-1-2-3-5garnier-t-i-c Brot-a und Butter-g</td>
+      <td>Brei-a g mit Kompott-3</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

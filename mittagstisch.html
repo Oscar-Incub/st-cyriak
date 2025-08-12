@@ -129,7 +129,7 @@
         <section class="hero-section fade-in">
             <div class="container">
                 <div class="container-inner">
-                    <div class="hero-image">
+                    <div class="hero-image box-shadow">
                         <div class="hero-image-slider">
                             <img src="img/mittagstisch/ckook.jpg" alt="Pflege Alltag" class="slider-img active" loading="lazy">
                             <img src="img/mittagstisch/ckook-2.jpg" alt="Pflege Team" class="slider-img" loading="lazy">
@@ -157,13 +157,13 @@
 
         <section id="speiseplan" class="speiseplan restaurant-menu-1 fade-in-up">
             <div class="container">                
-                <div class="container-inner accent-block"> 
-                    <h2 class="section-title">Speiseplan 2025</h2>
+                <div class="container-inner"> 
+                    <h2 class="section-title accent-title">Speiseplan 2025</h2>
                     <p class="accent-subtitle">
                         Für die Woche: 28. Juli – 03. August (KW 31)
                     </p>
                     
-                    <div id="table1"></div>
+                    <div id="table1" class="box-shadow"></div>
                     
                     <div class="accent-quote brown-quote">
                         <span>Kennzeichnung der Zusatzstoffe in Lebensmitteln</span>
@@ -174,13 +174,13 @@
 
         <section id="speiseplan2" class="speiseplan restaurant-menu-1 fade-in-up">
             <div class="container">                
-                <div class="container-inner accent-block"> 
-                    <h2 class="section-title">Speiseplan 2025</h2>
+                <div class="container-inner"> 
+                    <h2 class="section-title accent-title">Speiseplan 2025</h2>
                     <p class="accent-subtitle">
                         Für die Woche: 11. August – 17. August (KW 33)
                     </p>
                     
-                    <div id="table2"></div>
+                    <div id="table2" class="box-shadow"></div>
                     
                     <div class="accent-quote brown-quote">
                         <span>Kennzeichnung der Zusatzstoffe in Lebensmitteln</span>
@@ -189,23 +189,27 @@
             </div>
         </section>
         <section id="speiseplan3" class="speiseplan restaurant-menu-1 fade-in-up">
-            <div class="container">                
-                <div class="container-inner accent-block"> 
-                    <h2 class="section-title">Kennzeichnung der Zusatzstoffe in Lebensmitteln</h2> 
-                    
-                    <div id="table3"></div>
-                    
-                    <div class=""> 
-                        <p>Die Nährstoffrelationen bei Diabeteskost betragen durchschnittlich pro 100g fertiger Speise ca.</p>
+            <div class="container"> 
+                <div class="container-inner"> 
+                    <h2 class="section-title accent-title">Kennzeichnung der Zusatzstoffe in Lebensmitteln</h2> 
+                    <br>
+                    <div class="table-block">     
+                        <div id="table3" class="box-shadow"></div>
+                        <div id="table4" class="box-shadow"></div>
+                        
+                        <div class="speiseplan-content"> 
+                            <p>Die Nährstoffrelationen bei Diabeteskost betragen durchschnittlich pro 100g fertiger Speise ca.</p>
 
-                        <ul>
-                            <li>15 – 20 g Eiweiß</li>
-                            <li>30 – 35 g Fett</li>
-                            <li>45 – 55 g Kohlenhydrate</li>
-                        </ul>
-
-                        <p>Der durchschnittliche physiologische Brennwert pro 100 g beträgt ca. 100 – 120 Kilokalorien.</p>
-                        <p>Die Süßspeisen werden mit Fruchtzucker oder Süßstoff flüssig Cyclamat und Saccharin gesüßt. (März 2015)</p>
+                            <ul>
+                                <li>15 – 20 g Eiweiß</li>
+                                <li>30 – 35 g Fett</li>
+                                <li>45 – 55 g Kohlenhydrate</li>
+                            </ul>
+                            <br><br>
+                            <p>Der durchschnittliche physiologische Brennwert pro 100 g beträgt ca. 100 – 120 Kilokalorien.</p>
+                            <br>
+                            <p>Die Süßspeisen werden mit Fruchtzucker oder Süßstoff flüssig Cyclamat und Saccharin gesüßt. (März 2015)</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -244,20 +248,6 @@
             </div>            
         </div>
     </footer>
-
-<!-- Modal Kontakt -->
-        <div id="contact-modal" class="modal-overlay">
-            <div class="modal-window fade-in-up">
-                <button class="modal-close" aria-label="Schließen">&times;</button>
-                <h2>Kontaktieren Sie uns</h2>
-                <div class="contact-list">
-                <div class="contact-item"><span class="contact-icon">📞</span>+49 7723 9304-0</div>
-                <div class="contact-item"><span class="contact-icon">✉️</span>info@st-cyriak.de</div>
-                <div class="contact-item"><span class="contact-icon">📍</span>Am Kirchberg 6, 78120 Furtwangen, Deutschland</div>
-                </div>
-            </div>
-        </div>
-
 
 <script>
 const API_KEY = "AIzaSyAOOHbMY5mcL5qGdezB8K1p7WVmg6E3Zkc";
@@ -302,10 +292,10 @@ function loadSheetToDiv(SHEET_ID, RANGE, divId) {
       return r.json();
     })
     .then(data => {
-      if (!data.sheets || !data.sheets[0]) throw new Error('Нет листа в ответе');
+      if (!data.sheets || !data.sheets[0]) throw new Error('Es gibt kein Blatt in der Antwort');
       const sheet = data.sheets[0];
       const grid = sheet.data && sheet.data[0];
-      if (!grid) throw new Error('Нет gridData для диапазона');
+      if (!grid) throw new Error('Nein gridData für Reichweite');
 
       const startRow = grid.startRow || 0;
       const startCol = grid.startColumn || 0;
@@ -444,21 +434,172 @@ function loadSheetToDiv(SHEET_ID, RANGE, divId) {
       html += '</tbody></table>';
       html = `<style>
         .sheets-clone td { border-color: #999; border-style: solid; border-width: 1px; box-sizing: border-box; }
-        .sheets-clone td, .sheets-clone th { padding:6px; font-family: Roboto, Arial, sans-serif; font-size:10pt; }
+        .sheets-clone td, .sheets-clone th { padding:6px; font-family: Roboto, Arial, sans-serif !important; font-size:12pt; line-height: 1.2; }
+        .sheets-clone td:first-child { font-weight:600; }
+        .sheets-clone tr:first-child { font-weight:600; }
       </style>` + html;
 
       document.getElementById(divId).innerHTML = html;
     })
     .catch(err => {
       console.error(err);
-      document.getElementById(divId).innerText = 'Ошибка: ' + err.message;
+      document.getElementById(divId).innerText = 'Error: ' + err.message;
     });
 }
 
 
 loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "rmenu-1!A1:E8", "table1");
 loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "rmenu-2!A1:E8", "table2");
-loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "abcd!A1:F10", "table3");
+// loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "rmenu-2!A11:H15", "table2");
+loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "abcd!A1:B10", "table3");
+loadSheetToDiv("1BQHwETcxUinyuZ8XfS-gF3LJtpJA2A0pnGEv4L7_EyM", "abcd!D1:E15", "table4");
+</script>
+
+<script>
+(function(){
+  if (!document.getElementById('sheets-adapt-styles')) {
+    const css = `
+      .rmenu-mobile { display:none; font-family: Roboto, Arial, sans-serif; }
+      .mobile-row { border:1px solid #ddd; margin:12px 0; border-radius:6px; background:#fff; overflow:hidden; }
+      .mobile-item { display:flex; gap:12px; padding:10px; border-top:1px solid #eee; }
+      .mobile-item:first-of-type { border-top:none; }
+      .mobile-row .mobile-item:first-child { font-weight: bold; background: #d51116;}
+      .mobile-row .mobile-item:first-child .mobile-label { color: #fff !important; }
+      .mobile-row .mobile-item:first-child .mobile-value span { color: #fff !important; }
+      .mobile-label { min-width:120px; font-weight:700; color:#d50916; font-size:14px; text-align: center; }
+      .mobile-value span { flex:1; font-size:14px !important; text-align: center; }
+      @media (min-width:769px) { .rmenu-mobile { display:none !important; } }
+    `;
+    const s = document.createElement('style');
+    s.id = 'sheets-adapt-styles';
+    s.textContent = css;
+    document.head.appendChild(s);
+  }
+
+  // function buildMobileForTable(table) {
+  //   const headers = Array.from(table.querySelectorAll('thead tr th')).map(th => th.innerText.trim());
+  //   const rows = table.querySelectorAll('tbody tr');
+
+  //   const mobileDiv = document.createElement('div');
+  //   mobileDiv.className = 'rmenu-mobile';
+
+  //   rows.forEach(row => {
+  //     const cells = row.querySelectorAll('td');
+  //     const itemDiv = document.createElement('div');
+  //     itemDiv.className = 'mobile-row';
+
+  //     cells.forEach((cell, i) => {
+  //       const wrapper = document.createElement('div');
+  //       wrapper.className = 'mobile-item';
+
+  //       const label = document.createElement('div');
+  //       label.className = 'mobile-label';
+  //       label.textContent = headers[i] || '';
+
+  //       const value = document.createElement('div');
+  //       value.className = 'mobile-value';
+  //       value.textContent = cell.innerText.trim();
+
+  //       wrapper.appendChild(label);
+  //       wrapper.appendChild(value);
+  //       itemDiv.appendChild(wrapper);
+  //     });
+
+  //     mobileDiv.appendChild(itemDiv);
+  //   });
+
+  //   table.parentNode.appendChild(mobileDiv);
+  // }
+
+function buildMobileForTable(table) {
+ 
+  let headers = Array.from(table.querySelectorAll('thead tr th')).map(th => th.innerText.trim());
+  const rows = table.querySelectorAll('tbody tr');
+
+  if (headers.length === 0 && rows.length > 0) {
+    headers = Array.from(rows[0].querySelectorAll('td')).map(td => td.innerText.trim());
+  }
+
+  const mobileDiv = document.createElement('div');
+  mobileDiv.className = 'rmenu-mobile';
+
+  
+  let startRow = (headers.length && rows.length && headers[0] === rows[0].querySelector('td')?.innerText.trim()) ? 1 : 0;
+
+  for (let r = startRow; r < rows.length; r++) {
+    const row = rows[r];
+    const cells = row.querySelectorAll('td');
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'mobile-row';
+
+    cells.forEach((cell, i) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'mobile-item';
+
+      const label = document.createElement('div');
+      label.className = 'mobile-label';
+      label.textContent = headers[i] || '';
+
+      const value = document.createElement('div');
+      value.className = 'mobile-value';
+      // value.textContent = cell.innerText.trim();
+      value.innerHTML = cell.innerHTML;
+
+      const cellColor = cell.style.color || window.getComputedStyle(cell).color;
+      if (cellColor) value.style.color = cellColor;
+
+      wrapper.appendChild(label);
+      wrapper.appendChild(value);
+      itemDiv.appendChild(wrapper);
+    });
+
+    mobileDiv.appendChild(itemDiv);
+  }
+
+  table.parentNode.appendChild(mobileDiv);
+}
+
+
+  function adaptTableByContainer(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const table = container.querySelector('table');
+    if (!table) return;
+
+    if (!container.querySelector('.rmenu-mobile')) {
+      buildMobileForTable(table);
+    }
+  }
+
+  function adaptAllTables() {
+    ['table1', 'table2'].forEach(adaptTableByContainer);
+    toggleView();
+  }
+
+  function toggleView() {
+    const isMobile = window.innerWidth <= 768;
+    ['table1', 'table2'].forEach(id => {
+      const container = document.getElementById(id);
+      if (!container) return;
+      const table = container.querySelector('table');
+      const mobile = container.querySelector('.rmenu-mobile');
+      if (table) table.style.display = isMobile ? 'none' : '';
+      if (mobile) mobile.style.display = isMobile ? 'block' : 'none';
+    });
+  }
+
+  const observer = new MutationObserver(() => adaptAllTables());
+  ['table1', 'table2'].forEach(id => {
+    const container = document.getElementById(id);
+    if (container) observer.observe(container, { childList: true, subtree: true });
+  });
+
+  window.addEventListener('load', adaptAllTables);
+  window.addEventListener('resize', toggleView);
+
+  console.info('Sheets → mobile adapter initialized');
+})();
 </script>
 
 
